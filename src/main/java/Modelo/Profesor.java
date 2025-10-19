@@ -38,14 +38,11 @@ public class Profesor extends Persona{
     
     @Override
     public String toString(){
-        return "Nombre: " + nombre +
-                ", Dirección: " + direccion +
-                ", Teléfono: " + telefono +
-                ", Fecha Nac.: " + fechaNacimiento +
+        return super.toString()+
                 ", Cédula: " + cedula +
                 ", Área: " + area +
-                ", Salario x hora: " + salarioHora +
-                ", Horas dictadas: " + horasTrabajadas +
+                ", Salario por hora: " + salarioHora +
+                ", Horas Trabajadas: " + horasTrabajadas +
                 ", Pago mensual: " + calcularPagoMensual() +
                 ", Prestaciones: " + calcularPrestaciones();
     }
