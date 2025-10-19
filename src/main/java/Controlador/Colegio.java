@@ -61,5 +61,5 @@ public class Colegio {
         }
         JOptionPane.showMessageDialog(null, lista);
     }
-     
+      
 }
