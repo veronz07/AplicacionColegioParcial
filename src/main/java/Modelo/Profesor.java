@@ -25,5 +25,11 @@ public class Profesor extends Persona{
         this.area = area;
         this.salarioHora = salarioHora;
         this.horasTrabajadas = horasTrabajadas;
-    }  
+    } 
+    
+    public double calcularPagoMensual(){
+        double pago = salarioHora*horasTrabajadas;
+        return pago + (pago*0.2);
+    }
+
 }
