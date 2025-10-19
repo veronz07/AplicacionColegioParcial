@@ -35,4 +35,19 @@ public class Colegio {
         
         JOptionPane.showMessageDialog(null,"Profesor registrado exitosamente.");
     } 
+    
+    public void registrarEstudiante() {
+        String nombre = JOptionPane.showInputDialog("Ingrese el nombre del estudiante:");
+        String direccion = JOptionPane.showInputDialog("Ingrese la Dirección de residencia:");
+        String telefono = JOptionPane.showInputDialog("Ingrese el Teléfono de contacto con el acudiente:");
+        String fechaNacimiento = JOptionPane.showInputDialog("Ingrese la Fecha de nacimiento:");
+        int codigo = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el Código del estudiante:"));
+        int grado = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el Grado que cursa el estudiante:"));
+
+        Estudiante e = new Estudiante(nombre, direccion, telefono, fechaNacimiento, codigo,grado);
+        estudiantes.add(e);
+
+        JOptionPane.showMessageDialog(null, "Estudiante registrado exitosamente.");
+    }
+     
 }
