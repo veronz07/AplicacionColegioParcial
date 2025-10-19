@@ -47,7 +47,19 @@ public class Colegio {
         Estudiante e = new Estudiante(nombre, direccion, telefono, fechaNacimiento, codigo,grado);
         estudiantes.add(e);
 
-        JOptionPane.showMessageDialog(null, "Estudiante registrado exitosamente.");
+        JOptionPane.showMessageDialog(null, "Estudiante registrado exitosamente.");         
+    }
+    
+    public void listarEstudiantes(){
+        if (estudiantes.isEmpty()){
+            JOptionPane.showMessageDialog(null,"No hay estudiantes registrados");
+            return;
+        }
+        String lista = "LISTA DE ESTUDIANTES: \n";
+        for(Estudiante e: estudiantes){
+            lista += e.toString()+"\n";
+        }
+        JOptionPane.showMessageDialog(null, lista);
     }
      
 }
