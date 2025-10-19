@@ -18,14 +18,14 @@ public class Profesor extends Persona{
     public Profesor() {
         super();
     }
+    public Profesor(String nombre, String direccion, String telefono, String fechaNacimiento, String cedula, String area, double salarioHora, double horasTrabajadas) {
+    super(nombre, direccion, telefono, fechaNacimiento);
+    this.cedula = cedula;
+    this.area = area;
+    this.salarioHora = salarioHora;
+    this.horasTrabajadas = horasTrabajadas;
+}
 
-    public Profesor(String cedula, String area, double salarioHora, double horasTrabajadas, String nombre, String direccion, String telefono, String fechaNacimiento) {
-        super(nombre, direccion, telefono, fechaNacimiento);
-        this.cedula = cedula;
-        this.area = area;
-        this.salarioHora = salarioHora;
-        this.horasTrabajadas = horasTrabajadas;
-    } 
     
     public double calcularPagoMensual(){
         double pago = salarioHora*horasTrabajadas;
