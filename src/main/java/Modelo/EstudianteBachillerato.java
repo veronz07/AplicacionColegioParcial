@@ -11,6 +11,9 @@ package Modelo;
 public class EstudianteBachillerato extends Estudiante{
     private String nivelDeIgles;
     private double horasServicioSocial;
+
+    public EstudianteBachillerato() {
+    }
     public EstudianteBachillerato(String nombre, String direccion, String telefono, String fechaNacimiento,
                                   int codigo, int grado, double horasServicioSocial, String nivelDeIngles) {
         super(nombre, direccion, telefono, fechaNacimiento, codigo, grado);
