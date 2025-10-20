@@ -12,6 +12,10 @@ public class EstudiantePrimaria extends Estudiante {
     private String programasApoyo;
     private String nivelComprensionLectora;
 
+    public EstudiantePrimaria() {
+    }
+    
+
     public EstudiantePrimaria(String nombre, String direccion, String telefono, String fechaNacimiento,
                               int codigo, int grado, String programasApoyo, String nivelComprensionLectora) {
         super(nombre, direccion, telefono, fechaNacimiento, codigo, grado);
