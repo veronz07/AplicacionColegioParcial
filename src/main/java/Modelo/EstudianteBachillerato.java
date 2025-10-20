@@ -27,5 +27,11 @@ public class EstudianteBachillerato extends Estudiante{
 
     public String getNivelIngles() {
         return nivelDeIgles;
-    }    
+    }  
+    @Override
+    public String toString() {
+        return super.toString() +
+               ", Horas de servicio social: " + horasServicioSocial +
+               ", Nivel de inglés: " + nivelDeIgles;
+    }
 }
