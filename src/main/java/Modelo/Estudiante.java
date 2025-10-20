@@ -9,8 +9,8 @@ package Modelo;
  * @author Vero
  */
 public class Estudiante extends Persona {
-    private int codigo;
-    private int grado;
+    protected int codigo;
+    protected int grado;
     
     public Estudiante(){}
 
