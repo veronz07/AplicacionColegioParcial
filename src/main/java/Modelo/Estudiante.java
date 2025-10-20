@@ -10,7 +10,7 @@ package Modelo;
  */
 public class Estudiante extends Persona {
     protected int codigo;
-    protected int grado;
+    public int grado;
     
     public Estudiante(){}
 
