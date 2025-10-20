@@ -30,6 +30,13 @@ public class EstudiantePrimaria extends Estudiante {
     public String getNivelComprensionLectora() {
         return nivelComprensionLectora;
     }
+    
+    @Override
+    public String toString() {
+        return super.toString() +
+               ", Programas de apoyo: " + programasApoyo +
+               ", Nivel de comprensión lectora: " + nivelComprensionLectora;
+    }
 
 }
 
