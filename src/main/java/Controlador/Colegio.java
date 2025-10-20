@@ -6,6 +6,8 @@ package Controlador;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import Modelo.*;
+import java.util.Comparator;
+import java.util.Collections;
 
 /**
  *
@@ -19,7 +21,7 @@ public class Colegio {
         profesores= new ArrayList<>();
         estudiantes= new ArrayList<>();
     }
-    public void registrarProesor(){
+    public void registrarProfesor(){
         String nombre = JOptionPane.showInputDialog("Ingrese el nombre del profesor: ");
         String direccion= JOptionPane.showInputDialog("Ingrese la dirección de residencia: ");
         String telefono = JOptionPane.showInputDialog("Ingrese el número telefónico: ");
@@ -61,5 +63,29 @@ public class Colegio {
         }
         JOptionPane.showMessageDialog(null, lista);
     }
-      
+    
+    public void listarProfesoresOrdenados(){
+        if(profesores.isEmpty()){
+            JOptionPane.showMessageDialog(null,"No hay profesores registrados.");
+            return;
+        }
+        ArrayList<Profesor> listaOrdenada = new ArrayList<>(profesores);
+        
+    Collections.sort(listaOrdenada, new Comparator<Profesor>() {
+        @Override
+        public int compare(Profesor p1, Profesor p2) {
+        return Double.compare(p1.calcularPagoMensual(), p2.calcularPagoMensual());
+        }
+    });
+    
+    String lista= "LISTA DE PROFESORES SEGÚN PAGO MENSUAL (MENOR A MAYOR) \n";
+    double totalPrestaciones = 0;
+    
+    for(Profesor p : listaOrdenada){
+        lista +=p.toString()+"\n";
+        totalPrestaciones +=p.calcularPrestaciones();
+    }
+    lista += "\nTotal de prestaciones: " + totalPrestaciones;
+    JOptionPane.showMessageDialog(null, lista);
+    }  
 }
