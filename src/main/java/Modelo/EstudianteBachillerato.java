@@ -9,7 +9,7 @@ package Modelo;
  * @author Vero
  */
 public class EstudianteBachillerato extends Estudiante{
-    private String nivelDeIgles;
+    private String nivelDeIngles;
     private double horasServicioSocial;
 
     public EstudianteBachillerato() {
@@ -18,7 +18,7 @@ public class EstudianteBachillerato extends Estudiante{
                                   int codigo, int grado, double horasServicioSocial, String nivelDeIngles) {
         super(nombre, direccion, telefono, fechaNacimiento, codigo, grado);
         this.horasServicioSocial = horasServicioSocial;
-        this.nivelDeIgles = nivelDeIngles;
+        this.nivelDeIngles = nivelDeIngles;
     }
 
     public double getHorasServicioSocial() {
@@ -26,12 +26,12 @@ public class EstudianteBachillerato extends Estudiante{
     }
 
     public String getNivelIngles() {
-        return nivelDeIgles;
+        return nivelDeIngles;
     }  
     @Override
     public String toString() {
         return super.toString() +
                ", Horas de servicio social: " + horasServicioSocial +
-               ", Nivel de inglés: " + nivelDeIgles;
+               ", Nivel de inglés: " + nivelDeIngles;
     }
 }
