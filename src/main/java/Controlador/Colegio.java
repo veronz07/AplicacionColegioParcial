@@ -14,8 +14,8 @@ import java.util.Collections;
  * @author Vero
  */
 public class Colegio {
-    private ArrayList<Profesor> profesores;
-    private ArrayList<Estudiante> estudiantes;
+    public ArrayList<Profesor> profesores;
+    public ArrayList<Estudiante> estudiantes;
     
     public Colegio(){
         profesores= new ArrayList<>();
