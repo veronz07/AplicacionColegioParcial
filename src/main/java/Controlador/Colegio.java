@@ -16,6 +16,16 @@ import java.util.Collections;
 public class Colegio {
     public ArrayList<Profesor> profesores;
     public ArrayList<Estudiante> estudiantes;
+
+    public ArrayList<Profesor> getProfesores() {
+        return profesores;
+    }
+
+    public ArrayList<Estudiante> getEstudiantes() {
+        return estudiantes;
+    }
+    
+    
     
     public Colegio(){
         profesores= new ArrayList<>();
@@ -46,7 +56,9 @@ public class Colegio {
         int codigo = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el Código del estudiante:"));
         int grado = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el Grado que cursa el estudiante:"));
         if (grado >= 1 && grado <= 5) {
-            String programasApoyo = JOptionPane.showInputDialog("Ingrese los programas de apoyo a los que pertenece:");
+           String apoyo = JOptionPane.showInputDialog("¿Pertenece a programas de apoyo? (sí/no):");
+           boolean programasApoyo = apoyo.equalsIgnoreCase("sí") || apoyo.equalsIgnoreCase("si");
+
             String nivelLectura = JOptionPane.showInputDialog("Ingrese el nivel de comprensión lectora (Básico / Medio / Avanzado):");
 
             EstudiantePrimaria ep = new EstudiantePrimaria(nombre, direccion, telefono, fechaNacimiento,
