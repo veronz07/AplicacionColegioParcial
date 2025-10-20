@@ -45,11 +45,25 @@ public class Colegio {
         String fechaNacimiento = JOptionPane.showInputDialog("Ingrese la Fecha de nacimiento:");
         int codigo = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el Código del estudiante:"));
         int grado = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el Grado que cursa el estudiante:"));
+        if (grado >= 1 && grado <= 5) {
+            String programasApoyo = JOptionPane.showInputDialog("Ingrese los programas de apoyo a los que pertenece:");
+            String nivelLectura = JOptionPane.showInputDialog("Ingrese el nivel de comprensión lectora (Básico / Medio / Avanzado):");
 
-        Estudiante e = new Estudiante(nombre, direccion, telefono, fechaNacimiento, codigo,grado);
-        estudiantes.add(e);
+            EstudiantePrimaria ep = new EstudiantePrimaria(nombre, direccion, telefono, fechaNacimiento,
+                                                   codigo, grado, programasApoyo, nivelLectura);
+            estudiantes.add(ep);
+            JOptionPane.showMessageDialog(null, " Estudiante de primaria registrado correctamente.");
+        }
+        else if (grado >= 6 && grado <= 11) {
+            int horasServicio = Integer.parseInt(JOptionPane.showInputDialog("Ingrese las horas de servicio social:"));
+            String nivelIngles = JOptionPane.showInputDialog("Ingrese el nivel de inglés (A1 / A2 / B1 / B2 / C1 / C2):");
 
-        JOptionPane.showMessageDialog(null, "Estudiante registrado exitosamente.");         
+            EstudianteBachillerato eb = new EstudianteBachillerato(nombre, direccion, telefono, fechaNacimiento,
+                                                           codigo, grado, horasServicio, nivelIngles);
+            estudiantes.add(eb);
+            JOptionPane.showMessageDialog(null, " Estudiante de bachillerato registrado correctamente.");
+        }
+
     }
     
     public void listarEstudiantes(){
@@ -89,3 +103,4 @@ public class Colegio {
     JOptionPane.showMessageDialog(null, lista);
     }  
 }
+
