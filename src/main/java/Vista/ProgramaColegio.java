@@ -22,7 +22,7 @@ public class ProgramaColegio {
          int opcionPrincipal;
 
         do {
-            // 🔹 Menú principal
+           
             String menu = " MENÚ PRINCIPAL: \n"+
                     "1. Registrar persona \n"+
                     "2. Listar estudiantes \n"+
