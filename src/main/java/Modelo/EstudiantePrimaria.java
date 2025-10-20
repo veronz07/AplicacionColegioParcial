@@ -32,7 +32,7 @@ public class EstudiantePrimaria extends Estudiante {
     @Override
     public String toString() {
         return super.toString() +
-               ", Programas de apoyo: " + (programasApoyo ? "Sí" : "No") +
+               ", Programas de apoyo: " + (programasApoyo ? "Si" : "No") +
                ", Nivel de comprensión lectora: " + nivelComprensionLectora;
     }
 }
