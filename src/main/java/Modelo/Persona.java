@@ -9,7 +9,7 @@ package Modelo;
  * @author Vero
  */
 public class Persona {
-    protected String nombre;
+    public String nombre;
     protected String direccion;
     protected String telefono;
     protected String fechaNacimiento;
