@@ -19,6 +19,11 @@ public class Estudiante extends Persona {
         this.codigo = codigo;
         this.grado = grado;
     } 
+
+    public int getGrado() {
+        return grado;
+    }
+    
     @Override
     public String toString(){
         return super.toString() +
